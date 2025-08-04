@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nosotros - Patitas feliz</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<!-- Modal de Inicio de Sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </form>
+
+        <!-- Texto para crear cuenta -->
+        <div class="text-center mt-4">
+          <p class="mb-1">¿No tienes una cuenta?</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+            Crear cuenta
+          </button>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal de Crear Cuenta -->
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="registroModalLabel">Crear Cuenta</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Crea una contraseña" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+        </form>
+
+        <!-- Texto centrado -->
+        <div class="text-center mt-4 mb-3">
+          <p class="mb-2">Crear cuenta con</p>
+          <button class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="imagenes/logo huella.png" alt="Logo" style="height: 40px;">
+        <span class="logo-text">Veterinaria Patitas Feliz</span>
+      </a>      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-1" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Inicia sesión <i class="fa-solid fa-circle-user"></i>
+            </a>            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="container py-5">
+    <h1 class="mb-5 text-center" style="position: relative; display: inline-block; border-bottom: 4px solid #0F71F2;">
+      Sobre Nosotros
+    </h1>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <p class="fs-5">
+          En <strong>Patitas Felices</strong> somos una clínica veterinaria comprometida con el bienestar y la salud de tus mascotas. Desde nuestra fundación en 2010, hemos brindado atención profesional, amorosa y dedicada a miles de animales.
+        </p>
+        <p class="fs-5">
+          Contamos con un equipo de veterinarios apasionados y expertos en diferentes áreas: medicina general, cirugía, odontología, nutrición y más. Además, nuestras instalaciones están equipadas con tecnología de punta para asegurar diagnósticos precisos y tratamientos efectivos.
+        </p>
+        <p class="fs-5">
+          Nuestra misión es ofrecer un servicio integral con cariño, confianza y profesionalismo, creando un ambiente seguro para ti y tus fieles compañeros.
+        </p>
+      </div>
+      <div class="col-md-6">
+        <img src="imagenes/cm.jpg" alt="Equipo veterinario" class="img-fluid animate-fade-right">
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <div class="text-center mb-5">
+      <h2 style="display: inline-block; border-bottom: 4px solid #0F71F2;">
+        Nuestra Visión
+      </h2>
+    </div>
+    <div class="row align-items-center">
+      <div class="col-md-6">
+        <img src="imagenes/vision2.jpg" alt="Nuestra visión" class="img-fluid animate-fade-left">
+      </div>
+      <div class="col-md-6">
+        <p class="fs-5">
+          Nuestro objetivo es brindarles tanto a dueños como a sus mascotas, el servicio que se merecen, a precios asequibles.
+        </p>
+        <p class="fs-5">
+          Trabajamos cada día para ser un referente en atención veterinaria accesible y de alta calidad.
+        </p>
+        <p class="fs-5">
+          Creemos que cada mascota merece cuidados excepcionales sin importar su raza o condición.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="container py-5">
+    <h2 class="text-center mt-3 mb-4" style="display: inline-block; border-bottom: 4px solid #0F71F2;">
+      Mira por ti mismo nuestras instalaciones
+    </h2>    
+    <div class="text-center mb-4">
+      <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/embed/dHbvKIveNAE" title="Video de nuestras instalaciones" allowfullscreen loading="lazy"></iframe>
+      </div>
+    </div>
+  </section>
+
+  <section id="testimonios" class="py-5" style="background-color: #E5EFFC;">
+    <div class="container text-center">
+      <h2 class="mb-5" style="color: black; border-bottom: 4px solid #0F70F1; display: inline-block;">
+        Nuestro personal
+      </h2>
+      <div class="row g-4 justify-content-center mt-4">
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Carlos.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Carlos">
+          <blockquote class="blockquote text-black">
+            <p>DVM, BS. Obtuvo su grado doctoral en medicina veterinaria en Tuskegee University en 1984.</p>
+            <footer class="blockquote-footer text-black">Dr. Carlos Rivera Casanova</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/grisselle.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Grisselle">
+          <blockquote class="blockquote text-black">
+            <p>DVM, BS</p>
+            <footer class="blockquote-footer text-black">Dra. Grisselle Machado Cordero</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/irima.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Irma">
+          <blockquote class="blockquote text-black">
+            <p>Recepcionista y Secretaria</p>
+            <footer class="blockquote-footer text-black">Irma Rivera</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/monica.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Mónica">
+          <blockquote class="blockquote text-black">
+            <p>Técnica Veterinaria Licenciada</p>
+            <footer class="blockquote-footer text-black">Mónica</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Cindy Rivera.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Cindy">
+          <blockquote class="blockquote text-black">
+            <p>Técnica Veterinaria Licenciada</p>
+            <footer class="blockquote-footer text-black">Cindy Rivera</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Jorge Negrón.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Jorge">
+          <blockquote class="blockquote text-black">
+            <p>Técnico Veterinario Licenciado</p>
+            <footer class="blockquote-footer text-black">Jorge Negrón</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Yairaliz Ruiz Rodriguez.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Yairaliz">
+          <blockquote class="blockquote text-black">
+            <p>Técnica Veterinaria</p>
+            <footer class="blockquote-footer text-black">Yairaliz Ruiz Rodriguez</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Paola Curbelo Vazquez.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Paola">
+          <blockquote class="blockquote text-black">
+            <p>Técnica Veterinaria</p>
+            <footer class="blockquote-footer text-black">Paola Curbelo Vazquez</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Darelis I. Martínez.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Darelis">
+          <blockquote class="blockquote text-black">
+            <p>Técnica Veterinaria</p>
+            <footer class="blockquote-footer text-black">Darelis I. Martínez</footer>
+          </blockquote>
+        </div>
+        <div class="col-md-4 animate-fade-up">
+          <img src="imagenes/Valeria Pagán Rivera.png" class="img-fluid rounded-circle mb-3" style="width: 250px; height: 250px; object-fit: cover;" alt="Valeria">
+          <blockquote class="blockquote text-black">
+            <p>Técnica Veterinaria</p>
+            <footer class="blockquote-footer text-black">Valeria Pagán Rivera</footer>
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-row">
+        <div class="footer-links">
+          <h4>Acerca de nosotros</h4>
+          <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Nuestros servicios</a></li>
+            <li><a href="#">Política de privacidad</a></li>
+            <li><a href="#">Afíliate</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Preguntas</a></li>
+            <li><a href="#">Compras</a></li>
+            <li><a href="#">Consultas</a></li>
+            <li><a href="#">Pago</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Tienda</h4>
+          <ul>
+            <li><a href="#">Comidas</a></li>
+            <li><a href="#">Accesorios y juguetes</a></li>
+            <li><a href="#">Medicinas</a></li>
+            <li><a href="#">Camas</a></li>
+          </ul>
+        </div>
+        <div class="footer-links">
+          <h4>Síguenos</h4>
+          <div class="social-link">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("visible");
+          }
+        });
+      }, { threshold: 0.1 });
+      document.querySelectorAll(".animate-fade-left, .animate-fade-right, .animate-fade-up").forEach(el => {
+        observer.observe(el);
+      });
+    });
+  </script>
+</body>
+</html>

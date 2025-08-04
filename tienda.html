@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tienda</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link rel="stylesheet" href="estilos.css"/>
+</head>
+<!-- Modal de Inicio de Sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="contrasena" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+          </form>
+  
+          <!-- Texto para crear cuenta -->
+          <div class="text-center mt-4">
+            <p class="mb-1">¿No tienes una cuenta?</p>
+            <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+              Crear cuenta
+            </button>          
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Modal de Crear Cuenta -->
+  <div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+        <div class="modal-header bg-primary text-white">
+          <h5 class="modal-title" id="registroModalLabel">Crear Cuenta</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="nombre" class="form-label">Nombre completo</label>
+              <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+            </div>
+            <div class="mb-3">
+              <label for="correo" class="form-label">Correo electrónico</label>
+              <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+            </div>
+            <div class="mb-3">
+              <label for="contrasena" class="form-label">Contraseña</label>
+              <input type="password" class="form-control" id="contrasena" placeholder="Crea una contraseña" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+          </form>
+  
+          <!-- Texto centrado -->
+          <div class="text-center mt-4 mb-3">
+            <p class="mb-2">Crear cuenta con</p>
+            <button class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2">
+              <i class="fa-brands fa-google"></i> Google
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="imagenes/logo huella.png" alt="Logo" style="height: 40px;">
+        <span class="logo-text">Veterinaria Patitas Feliz</span>
+
+      </a>      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-1" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Inicia sesión <i class="fa-solid fa-circle-user"></i>
+            </a>            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sección de Productos -->
+  <section class="productos-section">
+    <div class="fondo-overlay">
+      <div class="container py-5">
+        <h2 class="text-center text-primary display-5 mb-5">Nuestros Productos</h2>
+        <div class="row g-4">
+
+          <!-- Producto -->
+          <div class="col-md-4">
+            <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+              <div class="text-center">
+                <img src="imagenes/rico1.jpg" alt="Producto 1" class="img-fluid mb-3 rounded">
+                <h5 class="mb-3">RICOCAN Adultos Razas Medianas Cordero y Cereal Bolsa 15 Kg</h5>
+                <h6>S/ 101.90</h6>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                <a href="#" class="btn btn-success btn-sm">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Copias de los otros productos, estructura igual -->
+          <div class="col-md-4">
+            <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+              <div class="text-center">
+                <img src="imagenes/rico2.jpg" alt="Producto 2" class="img-fluid mb-3 rounded">
+                <h5 class="mb-3">RICOCAN Adultos Todas las Razas Multisabores Bolsa 22 Kg</h5>
+                <h6>S/ 144.50</h6>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                <a href="#" class="btn btn-success btn-sm">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4">
+            <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+              <div class="text-center">
+                <img src="imagenes/rico3.jpg" alt="Producto 3" class="img-fluid mb-3 rounded">
+                <h5 class="mb-3">RICOCAN Adultos Pequeños Cordero y Cereal Bolsa 22Kg</h5>
+                <h6>S/ 144.50</h6>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                <a href="#" class="btn btn-success btn-sm">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cama 1 -->
+          <div class="col-md-4">
+            <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+              <div class="text-center">
+                <img src="imagenes/cama1.jpg" alt="Producto 4" class="img-fluid mb-3 rounded">
+                <h5 class="mb-3">Casa para Perro Member's Mark 100% Plástico</h5>
+                <h6>S/. 331.65</h6>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                <a href="#" class="btn btn-success btn-sm">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cama 2 -->
+          <div class="col-md-4">
+            <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+              <div class="text-center">
+                <img src="imagenes/cama2.jpg" alt="Producto 5" class="img-fluid mb-3 rounded">
+                <h5 class="mb-3">Cama para Mascota Member's Mark Gris 1 pza</h5>
+                <h6>S/. 152</h6>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                <a href="#" class="btn btn-success btn-sm">Comprar</a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Cama 3 -->
+          <div class="col-md-4">
+            <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+              <div class="text-center">
+                <img src="imagenes/cama3.jpg" alt="Producto 6" class="img-fluid mb-3 rounded">
+                <h5 class="mb-3">Cama para Mascotas Keter Beige</h5>
+                <h6>S/. 428.58</h6>
+              </div>
+              <div class="d-flex flex-column gap-2 mt-3">
+                <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+                <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+                <a href="#" class="btn btn-success btn-sm">Comprar</a>
+              </div>
+            </div>
+          </div>
+  <!-- jugete1 -->
+  <div class="col-md-4">
+    <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+      <div class="text-center">
+        <img src="imagenes/jugete1.jpg" alt="Producto 5" class="img-fluid mb-3 rounded">
+        <h5 class="mb-3">Warrior Juguete Interactivo Bola</h5>
+        <h6>S/. 14.83</h6>
+      </div>
+      <div class="d-flex flex-column gap-2 mt-3">
+        <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+        <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+        <a href="#" class="btn btn-success btn-sm">Comprar</a>
+      </div>
+    </div>
+  </div> 
+<!-- jugete2-->
+<div class="col-md-4">
+    <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+      <div class="text-center">
+        <img src="imagenes/jugete2.png" alt="Producto 5" class="img-fluid mb-3 rounded">
+        <h5 class="mb-3">(PT086) Peluche juguete guacamayo 30*20cm</h5>
+        <h6>S/.18.58</h6>
+      </div>
+      <div class="d-flex flex-column gap-2 mt-3">
+        <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+        <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+        <a href="#" class="btn btn-success btn-sm">Comprar</a>
+      </div>
+    </div>
+  </div>
+<!-- jugete3-->
+<div class="col-md-4">
+    <div class="producto d-flex flex-column justify-content-between bg-white p-4 rounded shadow h-100">
+      <div class="text-center">
+        <img src="imagenes/juegete3.jpg" alt="Producto 5" class="img-fluid mb-3 rounded">
+        <h5 class="mb-3">OUTLET Fecha Corta 18/08/2025- Juguete Matatabi Roller Toy</h5>
+        <h6>S/. 12.65</h6>
+      </div>
+      <div class="d-flex flex-column gap-2 mt-3">
+        <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+        <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+        <a href="#" class="btn btn-success btn-sm">Comprar</a>
+      </div>
+    </div>
+  </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Script para animar el logo -->
+  
+  <!-- Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+

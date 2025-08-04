@@ -1,0 +1,426 @@
+/* Navbar logo animado */
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #F9FAFB;
+  white-space: nowrap;
+}
+.logo-text span {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(-10px);
+  animation: aparecer 0.5s forwards;
+  min-width: 0.6ch;
+}
+@keyframes aparecer {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.logo-text span.last {
+  color: #4FD1C5;
+  animation: colorChange 1s forwards 0.5s;
+}
+@keyframes colorChange {
+  0% { color: #4FD1C5; }
+  100% { color: #F9FAFB; }
+}
+
+/* Carousel con fondo */
+.carousel-item {
+  height: 85vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.slide1 {
+  background-image: url("imagenes/cuidado-veterinario.jpg");
+}
+.slide2 {
+  background-image: url("imagenes/guarderia.jpg");
+}
+.slide3 {
+  background-image: url("imagenes/estetica.jpg");
+}
+.slide4 {
+  background-image: url("imagenes/urgencias.jpg");
+}
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 1rem;
+  border-radius: 1rem;
+}
+
+/* Estilo personalizado para el caption del carousel */
+.carousel-caption {
+  background-color: rgba(15, 113, 242, 0.8) !important; /* Azul medio transparente */
+  border-radius: 1rem;
+  padding: 1.5rem 2rem;
+  color: white;
+  text-shadow: none;
+}
+
+
+/* Personalización del botón en el carrusel */
+.carousel-caption .btn-warning {
+  background-color: #ffffff !important; /* Fondo blanco */
+  color: #0F71F2 !important;           /* Texto azul */
+  border: 2px solid #0F71F2;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.carousel-caption .btn-warning:hover {
+  background-color: #0F71F2 !important; /* Fondo azul al pasar el mouse */
+  color: #ffffff !important;            /* Texto blanco al pasar el mouse */
+  border-color: #0F71F2;
+}
+
+/* Fondo de la sección */
+.ubicacion-section {
+  background-color: #e6f4ff; /* Azul muy claro */
+}
+
+/* Estilo del título */
+.ubicacion-section h2 {
+  font-size: 2.5rem;
+  border-left: 6px solid #4FD1C5;
+  padding-left: 15px;
+  color: #0F71F2;
+}
+
+/* Animación simple */
+@keyframes fadeInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.fade-in {
+  animation: fadeInRight 1s ease-out forwards;
+  opacity: 0; /* Oculta antes de la animación */
+}
+
+/*ubicanos*/
+.imagen-ubicacion {
+  margin-top: -30px; /* sube la imagen */
+  max-height: 400px;
+  object-fit: cover;
+}
+
+article {
+  position: relative;
+  width: 100%; /* Para que se adapte al ancho de la columna */
+  max-width: 400px; /* Aumentado desde 250px */
+  margin: auto;
+  transition: all 0.3s ease;
+}
+
+article img:first-child {
+  width: 100%;
+  box-shadow: 0 60px 60px -60px rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+}
+
+article img:last-child {
+  position: absolute;
+  width: 320px; /* Aumentado desde 200px */
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+/* Sección Cartilla */
+.cartilla-section {
+  background-color: #0F71F2;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Imagen animada desde abajo */
+.animated-img {
+  opacity: 0;
+  transform: translateY(50px);
+  animation: aparecerDesdeAbajo 1s ease-out forwards;
+  animation-delay: 0.3s;
+}
+
+@keyframes aparecerDesdeAbajo {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Botón claro con texto azul */
+.cartilla-section .btn-light {
+  background-color: #ffffff;
+  color: #0F71F2;
+  border: none;
+  transition: all 0.3s ease;
+}
+
+.cartilla-section .btn-light:hover {
+  background-color: #e0f4ff;
+  color: #0F71F2;
+}
+
+
+/*tienda*/
+.productos-section {
+  position: relative;
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-image: url("imagenes/tienda.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+/* Fondo blanco degradado encima del fondo */
+.fondo-overlay {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 1) 0%, rgba(255, 255, 255, 0.85) 80%, rgba(255, 255, 255, 1) 100%);
+  padding: 60px 0;
+}
+
+.producto img {
+  height: 180px;
+  object-fit: cover;
+}
+
+.producto h5 {
+  color: #0F71F2;
+}
+
+.botones-producto {
+  align-items: center; /* Opcional: centra verticalmente los botones */
+}
+
+/* Animación de entrada desde abajo */
+@keyframes fadeUp {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Oculta inicialmente */
+.animate-fade-up {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+/* Clase que se activa cuando el elemento entra en pantalla */
+.animate-fade-up.visible {
+  animation: fadeUp 0.6s ease forwards;
+}
+
+/*imagen jardin*/
+article {
+  position: relative;
+  width: 250px;
+  transition: all 0.3s ease;
+}
+
+article img:first-child {
+  box-shadow: 0 60px 60px -60x rgba(0, 30, 255, 0.5);
+  border-radius: 4px;
+  object-fit: cover;
+  width: 100%;
+}
+
+article img:last-child {
+  position: absolute;
+  width: 200px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translateY(25%);
+  transition: 0.3s ease;
+  opacity: 0;
+}
+
+article:hover {
+  transform: perspective(250px) rotateX(10deg) translateY(-5%) translateZ(0);
+}
+
+article::before {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-image: linear-gradient(
+    to bottom,
+    transparent 10%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgb(255, 255, 255) 95%
+  );
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+
+article:hover::before {
+  opacity: 1;
+}
+
+article:hover img:last-child {
+  opacity: 1;
+  transform: translateY(10%);
+}
+
+/* Footer */
+.footer {
+  background-color: #2D2D2D;
+  padding: 80px 0;
+}
+.footer-row {
+  display: flex;
+  flex-wrap: wrap;
+}
+.footer-links {
+  width: 25%;
+  padding: 0 15px;
+}
+.footer-links h4 {
+  font-size: 20px;
+  color: #ffffff;
+  margin-bottom: 25px;
+  font-weight: 500;
+  border-bottom: 2px solid #4FD1C5;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+.footer-links ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.footer-links ul li a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #F9FAFB;
+  display: block;
+  margin-bottom: 15px;
+  transition: all .3s ease;
+}
+.footer-links ul li a:hover {
+  color: #ffffff;
+  padding-left: 6px;
+}
+.social-link a {
+  display: inline-block;
+  min-height: 40px;
+  width: 40px;
+  background-color: rgba(225, 255, 225, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #4FD1C5;
+  transition: all .5s ease;
+}
+.social-link a:hover {
+  background-color: #4FD1C5;
+  color: #fff;
+}
+
+/*Estilo para marca de agua */
+.marca-agua {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  opacity: 0.15;
+  max-width: 80px;
+  max-height: 80px;
+  pointer-events: none;
+}
+
+.marca-agua-vertical {
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 50%;
+  object-fit: cover;
+  opacity: 0.12;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/*contacto*/
+.display-5 {
+  font-weight: 600;
+  font-size: 2.5rem;
+}
+
+.display-5::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #000000;
+  margin-top: 10px;
+}
+.display-5::after {
+  content: "";
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #0F71F2;
+  margin-top: 10px;
+}
+/*nosotros*/
+.animate-fade-right {
+  opacity: 0;
+  transform: translateX(30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate-fade-right.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.animate-fade-left {
+  opacity: 0;
+  transform: translateX(-30px);
+  transition: all 0.8s ease-in-out;
+}
+
+.animate-fade-left.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+ /* servicios - tablas */
+table {
+  border: 2px solid #4FD1C5 !important;
+}
+
+table th,
+table td {
+  border: 1px solid #4FD1C5 !important;
+}
+
+.turquesa-header th {
+  background-color: #4FD1C5 !important;
+  color: white !important;
+}

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veterinaria Patitas feliz</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<!-- Modal de Inicio de Sesión -->
+<div class="modal fade" id="loginModal" tabindex="-1" aria-labelledby="loginModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="loginModalLabel">Iniciar Sesión</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="nombre@ejemplo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Contraseña" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+        </form>
+
+        <!-- Texto para crear cuenta -->
+        <div class="text-center mt-4">
+          <p class="mb-1">¿No tienes una cuenta?</p>
+          <button class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#registroModal">
+            Crear cuenta
+          </button>          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal de Crear Cuenta -->
+<div class="modal fade" id="registroModal" tabindex="-1" aria-labelledby="registroModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header bg-primary text-white">
+        <h5 class="modal-title" id="registroModalLabel">Crear Cuenta</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+          <div class="mb-3">
+            <label for="nombre" class="form-label">Nombre completo</label>
+            <input type="text" class="form-control" id="nombre" placeholder="Tu nombre" required>
+          </div>
+          <div class="mb-3">
+            <label for="correo" class="form-label">Correo electrónico</label>
+            <input type="email" class="form-control" id="correo" placeholder="ejemplo@correo.com" required>
+          </div>
+          <div class="mb-3">
+            <label for="contrasena" class="form-label">Contraseña</label>
+            <input type="password" class="form-control" id="contrasena" placeholder="Crea una contraseña" required>
+          </div>
+          <button type="submit" class="btn btn-primary w-100">Registrarse</button>
+        </form>
+
+        <!-- Texto centrado -->
+        <div class="text-center mt-4 mb-3">
+          <p class="mb-2">Crear cuenta con</p>
+          <button class="btn btn-outline-primary w-100 d-flex align-items-center justify-content-center gap-2">
+            <i class="fa-brands fa-google"></i> Google
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<body>
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <div class="container-fluid">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img src="imagenes/logo huella.png" alt="Logo" style="height: 40px;">
+        <span class="logo-text">Veterinaria Patitas Feliz</span>
+
+      </a>      
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+          <li class="nav-item"><a class="nav-link" href="nosotros.html">Nosotros</a></li>
+          <li class="nav-item"><a class="nav-link" href="servicios.html">Servicios</a></li>
+          <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          <li class="nav-item"><a class="nav-link" href="tienda.html">Tienda</a></li>
+          <li class="nav-item">
+            <a class="nav-link d-flex align-items-center gap-1" href="#" data-bs-toggle="modal" data-bs-target="#loginModal">
+              Inicia sesión <i class="fa-solid fa-circle-user"></i>
+            </a>            
+          </li>
+          
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Carousel -->
+  <div id="veterinariaCarousel" class="carousel slide" data-bs-ride="carousel">
+    <div class="carousel-inner">
+      <div class="carousel-item active">
+        <img src="imagenes/cuidado.webp" class="d-block w-100" alt="Veterinario con perro">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Cuidado Profesional</h5>
+          <p>Tu mascota merece lo mejor</p>
+          <a class="btn btn-warning" href="servicios.html">Saber más</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/guarderia.jpg" class="d-block w-100" alt="Guardería">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Guardería Confiable</h5>
+          <p>Tranquilidad para ti, diversión para ellos</p>
+          <a class="btn btn-warning" href="servicios.html">Saber más</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/estetica.webp" class="d-block w-100" alt="Estética canina">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Estética y Bienestar</h5>
+          <p>¡Deja a tu mascota reluciente!</p>
+          <a class="btn btn-warning" href="servicios.html">Saber más</a>
+        </div>
+      </div>
+      <div class="carousel-item">
+        <img src="imagenes/24hU.jpg" class="d-block w-100" alt="Urgencias veterinarias">
+        <div class="carousel-caption d-none d-md-block">
+          <h5>Urgencias 24/7</h5>
+          <p>Siempre disponibles para tu mascota</p>
+          <a class="btn btn-warning" href="contacto.html">Contáctanos</a>
+        </div>
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#veterinariaCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Anterior</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#veterinariaCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Siguiente</span>
+    </button>
+   <!-- Sección Ubícanos -->
+   <section class="ubicacion-section py-5">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-md-6">
+          <h2 class="display-5 text-primary mb-4">Ubícanos</h2>
+          <p class="lead mt-3">
+            Nuestra clínica veterinaria está ubicada al costado de la Videna entre Villa inn y Increte systems siempre listos para ofrecerte atención inmediata y accesible. 
+            Contamos con estacionamiento, cerca a áreas verdes para paseos breves, y una sala de espera cómoda para ti y tu mascota.
+          </p>
+        </div>
+        <div class="col-md-6">
+          <div class="ratio ratio-4x3 shadow rounded">
+            <iframe 
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d975.0236150668443!2d-77.1142311256871!3d-12.010830646582195!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105d20ccaa8c14f%3A0x8a0c72fc2b3aa493!2sAv.%20San%20Luis%201369%2C%20Callao%2015021!5e0!3m2!1ses!2spe!4v1720970807036!5m2!1ses!2spe" 
+              width="100%" 
+              height="100%" 
+              style="border:0;" 
+              allowfullscreen="" 
+              loading="lazy" 
+              referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
+          </div>
+        </div>        
+      </div>
+    </div>
+  </section>
+  
+
+  <!-- Sección Por qué elegirnos -->
+<section class="elegirnos-section py-5 bg-light">
+  <div class="container">
+    <div class="row align-items-center">
+      <!-- Texto -->
+      <div class="col-md-6">
+        <h2 class="display-5 text-primary mb-4">¿Por qué elegirnos?</h2>
+        <p class="lead">
+          En Veterinaria Patitas Felices nos dedicamos con pasión y compromiso al cuidado integral de tus mascotas.  
+          Nuestro equipo está conformado por profesionales altamente capacitados y con experiencia en atención personalizada.  
+          Contamos con tecnología moderna para diagnósticos precisos y tratamientos efectivos.  
+          Además, ofrecemos un entorno cálido y amigable para que tanto tú como tu mascota se sientan en casa.  
+          Confía en nosotros para brindarles bienestar, salud y cariño a tus compañeros peludos.
+        </p>
+      </div>
+
+      <!-- Imagen -->
+      <div class="col-md-6">
+        <article>
+        <img src="imagenes/perro jardin.jpg" alt="Veterinaria feliz" class="img-fluid rounded shadow">
+        <img src="imagenes/perro jardin.png">
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Sección Sube tu Cartilla -->
+<section class="cartilla-section py-5 text-white bg-primary">
+  <div class="container">
+    <div class="row align-items-center">
+      
+       <!-- Columna Izquierda: Texto centrado -->
+       <div class="col-md-6 d-flex flex-column justify-content-center align-items-center text-center">
+        <div>
+          <h2 class="fw-bold mb-4" style="border-bottom: 4px solid white; display: inline-block;">Sube tu cartilla</h2>
+          <p class="fs-5">
+            Crea una cuenta y sube todos los papeles y cartillas importantes.  
+            Asegúrate con nuestra ayuda de no perder documentos vitales para la salud de tus mascotas.  
+            Al hacerlo, nos brindas información valiosa que siempre tendremos a la mano.  
+            Te brindaremos el servicio que mereces de manera rápida y eficiente.
+          </p>
+          <a href="#" class="btn btn-light btn-lg text-primary fw-bold mt-3 px-4 py-2" data-bs-toggle="modal" data-bs-target="#loginModal">Hazlo ahora</a>
+        </div>
+      </div>
+
+      <!-- Columna Derecha: Imagen -->
+      <div class="col-md-6 text-center mt-4 mt-md-0">
+        <img src="imagenes/cartilla.webp" alt="Sube tu cartilla" class="img-fluid rounded shadow">
+      </div>
+      
+    </div>
+  </div>
+</section>
+
+  
+  <!-- Sección Nuestros Productos -->
+<section id="tienda" class="productos-section">
+  <div class="fondo-overlay">
+    <div class="container py-5">
+      <h2 class="text-center text-primary display-5 mb-5">Nuestros Productos</h2>
+      <div class="row g-4">
+        <!-- Producto 1 -->
+        <div class="col-md-4">
+          <div class="producto animate-fade-up text-center bg-white p-4 rounded shadow">
+            <img src="imagenes/rico1.jpg" alt="Producto 1" class="img-fluid mb-3 rounded">
+            <h5 class="mb-3">RICOCAN Adultos Razas Medianas Cordero y Cereal Bolsa 15 Kg</h5>
+            <h6>S/ 101.90</h6>
+            <div class="botones-producto d-flex flex-column gap-2">
+              <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+              <a href="#" class="btn btn-success btn-sm">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 2 -->
+        <div class="col-md-4">
+          <div class="producto animate-fade-up text-center bg-white p-4 rounded shadow">
+            <img src="imagenes/rico2.jpg" alt="Producto 2" class="img-fluid mb-3 rounded">
+            <h5 class="mb-3">RICOCAN Adultos Todas las Razas Multisabores Bolsa 22 Kg</h5>
+            <h6>S/ 144.50</h6>
+            <div class="botones-producto d-flex flex-column gap-2">
+              <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+              <a href="#" class="btn btn-success btn-sm">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+        <!-- Producto 3 -->
+        <div class="col-md-4">
+          <div class="producto animate-fade-up text-center bg-white p-4 rounded shadow">
+            <img src="imagenes/rico3.jpg" alt="Producto 3" class="img-fluid mb-3 rounded">
+            <h5 class="mb-3">RICOCAN Adultos Pequeños Cordero y Cereal Bolsa 22Kg</h5>
+            <h6>S/ 144.50</h6>
+            <div class="botones-producto d-flex flex-column gap-2">
+              <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+              <a href="#" class="btn btn-success btn-sm">Comprar</a>
+            </div>
+          </div>
+        </div>
+
+         <!-- Producto (cama)1 -->
+         <div class="col-md-4">
+          <div class="producto animate-fade-up text-center bg-white p-4 rounded shadow">
+            <img src="imagenes/cama1.jpg" alt="Producto 3" class="img-fluid mb-3 rounded">
+            <h5 class="mb-3">Casa para Perro Member's Mark 100% Plástico</h5>
+            <h6>S/. 331.65</h6>
+            <div class="botones-producto d-flex flex-column gap-2">
+              <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+              <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+              <a href="#" class="btn btn-success btn-sm">Comprar</a>
+            </div>
+          </div>
+        </div>
+<!-- Producto (cama)2 -->
+<div class="col-md-4">
+  <div class="producto animate-fade-up text-center bg-white p-4 rounded shadow">
+    <img src="imagenes/cama2.jpg" alt="Producto 3" class="img-fluid mb-3 rounded">
+    <h5 class="mb-3">Cama para Mascota Member's Mark Gris 1 pza</h5>
+    <h6>S/. 152</h6>
+    <div class="botones-producto d-flex flex-column gap-2">
+      <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+      <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+      <a href="#" class="btn btn-success btn-sm">Comprar</a>
+    </div>
+  </div>
+</div>
+<!-- Producto (cama)3 -->
+<div class="col-md-4">
+  <div class="producto animate-fade-up text-center bg-white p-4 rounded shadow">
+    <img src="imagenes/cama3.jpg" alt="Producto 3" class="img-fluid mb-3 rounded">
+    <h5 class="mb-3">Cama para Mascotas Keter Beige</h5>
+    <h6>S/. 428.58</h6>
+    <div class="botones-producto d-flex flex-column gap-2">
+      <a href="#" class="btn btn-outline-primary btn-sm">+ Más detalles</a>
+      <a href="#" class="btn btn-outline-secondary btn-sm">Ver</a>
+      <a href="#" class="btn btn-success btn-sm">Comprar</a>
+    </div>
+  </div>
+</div>
+      </div>
+
+      <!-- Botón Ver más -->
+      <div class="text-center mt-5">
+        <a href="tienda.html" class="btn btn-lg btn-outline-primary">Ver más +</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+</section>
+
+     <!-- footer -->
+     <footer class="footer">
+      <div class="container">
+        <div class="footer-row">
+          
+          <div class="footer-links">
+            <h4>Acerca de nosotros</h4>
+            <ul>
+              <li><a href="#">Nosotros</a></li>
+              <li><a href="#">Nuestros servicios</a></li>
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Afiliate</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Ayuda</h4>
+            <ul>
+              <li><a href="#">Preguntas</a></li>
+              <li><a href="#">Compras</a></li>
+              <li><a href="#">Consultas</a></li>
+              <li><a href="#">Pago</a></li>
+            </ul>
+          </div>
+          
+          <div class="footer-links">
+            <h4>Tienda</h4>
+            <ul>
+              <li><a href="#">Comidas</a></li>
+              <li><a href="#">Accesorios y juguetes</a></li>
+              <li><a href="#">Medicinas</a></li>
+              <li><a href="#">Camas</a></li>
+            </ul>
+          </div>
+          <div class="footer-links">
+            <h4>Siguenos</h4>
+            <div class="social-link">             
+             <div class="social-link">
+             <a href="#"><i class="fab fa-facebook-f"></i></a>
+             <a href="#"><i class="fab fa-instagram"></i></a>
+             <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+            </div>
+            </div>
+          </div>
+        </div>
+      </div>
+     </footer>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  
+  
+  
+  <script>
+    // Detectar si los elementos están en el viewport
+    function isInViewport(element) {
+      const rect = element.getBoundingClientRect();
+      return (
+        rect.top <= (window.innerHeight - 100) &&
+        rect.bottom >= 0
+      );
+    }
+  
+    function showOnScroll() {
+      const elementos = document.querySelectorAll(".animate-fade-up");
+      elementos.forEach(el => {
+        if (isInViewport(el)) {
+          el.classList.add("visible");
+        }
+      });
+    }
+  
+    // Ejecutar cuando se cargue y cuando se haga scroll
+    window.addEventListener("DOMContentLoaded", showOnScroll);
+    window.addEventListener("scroll", showOnScroll);
+  </script>
+  
+  
+</body>
+</html>
