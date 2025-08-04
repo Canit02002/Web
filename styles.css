@@ -1,0 +1,416 @@
+/* Contenedor con posición relativa */
+#brand-logo {
+  overflow: hidden;
+}
+
+/* Imagen flotante */
+.floating-logo {
+  max-height: 40px;
+  animation: float 3s ease-in-out infinite;
+  transition: opacity 1.5s ease, transform 0.5s ease;
+  display: block;
+}
+
+/* Texto oculto por defecto */
+.brand-text {
+  display: none;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  color: white;
+  font-weight: bold;
+}
+
+/* Animación de flotación */
+@keyframes float {
+  0%   { transform: translateY(0); }
+  50%  { transform: translateY(-5px); }
+  100% { transform: translateY(0); }
+}
+
+/* Hover: ocultar imagen, mostrar texto */
+#brand-logo:hover .floating-logo {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+#brand-logo:hover .brand-text {
+  display: inline;
+  opacity: 1;
+}
+
+.logo-wrapper {
+  position: relative;
+  width: 160px; /* o el ancho que consideres necesario */
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Imagen flotante */
+.floating-logo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  animation: float 3s ease-in-out infinite;
+  transition: opacity 1.5s ease, transform 0.5s ease;
+}
+
+/* Texto superpuesto (invisible al inicio pero en la misma posición) */
+.brand-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 1.5s ease;
+  color: white;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+/* Hover: oculta imagen y muestra texto */
+#brand-logo:hover .floating-logo {
+  opacity: 0;
+  pointer-events: none;
+  transform: scale(0.9);
+}
+
+#brand-logo:hover .brand-text {
+  opacity: 1;
+}
+
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #ffffff;
+  color: #3B0273;
+}
+
+/* Fondo del navbar */
+.custom-navbar {
+  background-color: #F860D3;
+}
+
+/* Enlace "ART GALERY SHOP" */
+.custom-navbar .navbar-brand {
+  color: white;
+}
+
+/* Enlaces de navegación */
+.custom-navbar .custom-link {
+  color: #3B0273 !important;
+  font-weight: bold;
+}
+
+.custom-navbar .custom-link:hover {
+  color: #ffffff !important;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  background: linear-gradient(to left, rgba(255, 255, 255, 0.95), rgba(255, 255, 255, 0.7), rgba(255, 255, 255, 0)),
+              url('imagenes/imagen4.jpg') no-repeat right center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  min-height: 400px;
+}
+
+.hero-content {
+  max-width: 600px;
+  z-index: 1;
+}
+
+.cta-button {
+  padding: 1rem 2rem;
+  background: #F25EDA;
+  color: #3B0273;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  cursor: pointer;
+  box-shadow: 0 0 15px 4px #3B0273; /* 👈 Sombra externa */
+  transition: all 0.3s ease-in-out;
+}
+
+.features {
+  background-color: #f9fafb;
+}
+
+.feature {
+  background: #F25EDA;
+  color: #3B0273;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  margin: 1rem;
+  padding: 2rem;
+  text-align: center;
+  transition: background 0.5s;
+}
+
+.feature.hover-feature {
+  transition: all 0.3s ease;
+}
+
+.feature.hover-feature:hover {
+  box-shadow: 0 0 20px 8px rgba(248, 96, 211, 0.5); /* Luz suave #F860D3 */
+  z-index: 1;
+}
+
+#mas-de-nosotros h2 {
+  color: #ffffff;
+}
+
+#mas-de-nosotros .bg-light {
+  background-color: #f1f1f1 !important;
+  border: 2px solid #DCC1EF;
+}
+
+.bg-custom-nosotros {
+  background-color: #D91882; /* Cambia este valor por el color que prefieras */
+  .custom-nosotros-title,
+  .custom-box h4,
+  .custom-box p {
+    color: #ffffff;
+  }
+
+  .custom-box {
+    background-color: #F860D3;
+  }
+}
+
+.feature a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.info-section {
+  padding: 4rem 2rem;
+  background-color: #DCC1EF;
+}
+
+.info-text h2,
+.info-text p {
+  color: white;
+}
+
+.info-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.info-text {
+  flex: 1 1 400px;
+  padding: 1rem;
+}
+
+.info-image {
+  flex: 1 1 400px;
+  padding: 1rem;
+  text-align: center;
+}
+
+.info-image img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+
+.custom-box {
+  background-color: #F860D3;
+  color: #DCC1EF;
+  transition: transform 0.4s ease;
+}
+
+.custom-box h4,
+.custom-box p {
+  color: #DCC1EF;
+}
+
+/* Cuando .box-1 está activa, crece */
+.box-1.active {
+  transform: scale(1.05);
+}
+
+/* Mientras la otra se encoge */
+.box-2.shrink {
+  transform: scale(0.95);
+}
+
+/* Y viceversa */
+.box-2.active {
+  transform: scale(1.05);
+}
+
+.box-1.shrink {
+  transform: scale(0.95);
+}
+
+.custom-box {
+  background-color: #F860D3;
+  color: #DCC1EF;
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+  box-shadow: none;
+}
+
+/* Estilo del texto */
+.custom-box h4,
+.custom-box p {
+  color: #DCC1EF;
+}
+
+/* SOLO aplica sombra interna a los cuadros de "más sobre nosotros", NO a las imágenes */
+.box-1.active,
+.box-2.active {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(251, 169, 241, 0.4); /* 🔴 ya sin el inset blanco */
+}
+
+
+/* La opuesta se encoge sin sombra */
+.box-1.shrink,
+.box-2.shrink {
+  transform: scale(0.95);
+  box-shadow: none;
+}
+
+.img-box {
+  transition: all 0.4s ease;
+  cursor: pointer;
+  padding: 10px;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-box img {
+  width: 100%;
+  border-radius: 12px;
+  transition: transform 0.4s ease, opacity 0.4s ease; /* 👈 elimina box-shadow de aquí */
+}
+
+/* ✅ Modificado con luz rosa suave */
+.img-box.active img {
+  transform: scale(1.1);
+  box-shadow: 0 0 60px 24px rgba(248, 96, 211, 0.7); /* más intenso y amplio */
+  opacity: 1;
+}
+
+
+.img-box.shrink img {
+  transform: scale(0.9);
+  opacity: 0.5;
+}
+
+.img-label {
+  position: absolute;
+  bottom: 12px;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #D91882;
+  font-weight: bold;
+  font-size: 1.1rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.img-box.active .img-label {
+  opacity: 1;
+}
+
+/* Degradado a la derecha en info2 */
+#info2 {
+  position: relative;
+  background: linear-gradient(to bottom, #D91882 0%, #D91882 100%);
+  /* Esto aplica el color sólido que puedes modificar a un degradado */
+  z-index: 0;
+}
+
+#info2::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  background: linear-gradient(to bottom, #D91882 0%, transparent 100%);
+  z-index: -1;
+  pointer-events: none;
+}
+
+
+
+/* Asegurar que el contenido esté por encima del fondo degradado */
+#info2 .info-text,
+#info2 .info-image {
+  position: relative;
+  z-index: 1;
+}
+
+
+footer {
+  background: #F25EDA;
+}
+
+.footer-links h4 {
+  color: #ffffff;
+}
+
+.footer-links ul {
+  list-style: none; /* 👈 Esto elimina los puntos */
+  padding: 0;
+  margin: 0;
+}
+
+
+.footer-links ul li a {
+  color: #ffffff;
+  text-decoration: none;
+  transition: all .3s ease;
+}
+
+.footer-links ul li a:hover {
+  padding-left: 6px;
+}
+
+.social-link a {
+  display: inline-block;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  margin: 0 10px 10px 0;
+  text-align: center;
+  line-height: 40px;
+  border-radius: 50%;
+  color: #ffffff;
+  transition: all .5s ease;
+}
+
+.social-link a:hover {
+  background-color: #ffffff;
+  color: #F25EDA;
+}
+
+@media(max-width:768px) {
+  .info-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .reverse-layout {
+    flex-direction: column-reverse !important;
+  }
+}

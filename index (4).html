@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Landing Page Responsive</title>
+
+  <!-- Bootstrap 5.3 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" integrity="sha512-..." crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="70" class="bg-light">
+
+  <header>
+    <nav class="navbar navbar-expand-lg custom-navbar">
+      <div class="container">
+        <a class="navbar-brand text-white fw-bold position-relative d-inline-block" href="#" id="brand-logo">
+          <div class="logo-wrapper">
+            <img src="imagenes/logito.png" alt="Logo" class="floating-logo" />
+            <span class="brand-text">ART GALERY SHOP</span>
+          </div>
+        </a>
+        
+        
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        
+        <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item"><a class="nav-link custom-link" href="#que-somos">¿Qué somos?</a></li>
+            <li class="nav-item"><a class="nav-link custom-link" href="#mas-de-nosotros">más de nosotros</a></li>
+            <li class="nav-item"><a class="nav-link custom-link" href="#contacto">Contacto</a></li>
+            <li class="nav-item"><a class="nav-link custom-link" href="#tiendas">Tiendas</a></li>
+            <li class="nav-item">
+              <a class="nav-link custom-link" href="#inicia-sesion">
+                <i class="fa-solid fa-circle-user"></i> Inicia sesión
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    
+  </header>
+  
+
+  <section class="hero text-center text-dark d-flex align-items-center">
+    <div class="container hero-content">
+      <h1 class="display-5 fw-bold">Únete a la familia de artistas emergentes</h1>
+      <p class="lead">Descubre cómo podemos ayudarte a mejorar tu carrera como artista.</p>
+      <button class="cta-button">Comenzar ahora</button>
+    </div>
+  </section>
+
+  <section id="que-somos" class="features d-flex flex-wrap justify-content-around py-4">
+    <div class="container"></div>
+    <div class="feature hover-feature" data-img="imagenes/image1.jpg">
+      <a href="#info">
+        <h2>¿Quiénes somos?</h2>
+        <p>Somos una comunidad dedicada a ayudar a artistas nacionales para que puedan exponer y vender su arte.</p>
+      </a>
+    </div>
+    <div class="feature hover-feature" data-img="imagenes/imagen2.png">
+      <a href="#info2">
+        <h2>Conoce a nuevos artistas</h2>
+        <p>Inspírate viendo los trabajos de los artistas ya registrados.</p>
+      </a>
+    </div>
+    <div class="feature hover-feature" data-img="imagenes/imagen3.jpg">
+      <a href="#info3">
+        <h2 >¡Abre tu propia tienda!</h2>
+        <p>Regístrate y expon tu trabajo para que todos lo puedan ver.</p>
+      </a>
+    </div>
+  </section>
+
+  <section id="mas-de-nosotros" class="bg-custom-nosotros text-center py-5">
+    <div class="container">
+      <h2 class="h3 custom-nosotros-title">Más sobre nosotros</h2>
+      <div class="row justify-content-center custom-box-container">
+        <div class="col-md-5">
+          <div class="custom-box p-4 rounded h-100 box-1">
+            <h4>Creador del evento</h4>
+            <p>
+              Descubre cómo el creativo detrás de la tienda, Ness is sans confirmed, creó desde cero las primeras ferias.
+              Ve los primeros pasos de esta gran familia.
+            </p>
+          </div>
+        </div>
+      
+        <div class="col-md-5">
+          <div class="custom-box p-4 rounded h-100 box-2">
+            <h4>Mira las primeras ferias</h4>
+            <p>
+              Antes de que se planteara la galería virtual, tuvimos las primeras ferias. 
+              Regresa atrás en el tiempo y asómbrate con nuestros recuerdos.
+            </p>
+          </div>
+        </div>
+      </div>
+      
+    </div>
+  </section>
+  
+  <section id="galeria-artistas" class="bg-white text-center py-5 position-relative">
+    <div class="container">
+      <h2 class="h3 mb-4" style="color: #3B0273;">Galería de artistas</h2>
+      <div class="row justify-content-center custom-img-box-container">
+        <div class="col-md-4">
+          <div class="img-box box-img-1" data-label="Artista 1" data-desc="*CADA SEMANA SE ACTULIZA CON NUVAS OBRAS DE ARTISTAS ALAZARES*.">
+            <img src="imagenes/galeria1.jpg" alt="Artista 1" class="img-fluid rounded">
+            <div class="img-label">Cosplay de Mavis y Johnny
+              desde @Cos-play.Perú
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-box box-img-2" data-label="Artista 2" data-desc="*CADA SEMANA SE ACTULIZA CON NUVAS OBRAS DE ARTISTAS ALAZARES*.">
+            <img src="imagenes/galeria2.jpg" alt="Artista 2" class="img-fluid rounded">
+            <div class="img-label">Kuromi le lanza un peluche del Dr. Simi a Ozzy Osbourne
+              durante su último concierto - Pintura acrílica sobre lienzo 13x17cm @NessConfirmed
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4">
+          <div class="img-box box-img-3" data-label="Artista 3" data-desc="*CADA SEMANA SE ACTULIZA CON NUVAS OBRAS DE ARTISTAS ALAZARES*.">
+            <img src="imagenes/galeria3.jpg" alt="Artista 3" class="img-fluid rounded">
+            <div class="img-label">Wendy feliz con su pollo y Machín renegando
+              de Pataclaun - Figuras de Epoxica de 17cm de alto
+              @NessConfirmed</div>
+          </div>
+        </div>
+      </div>
+  
+      <!-- Texto externo que aparece cuando se hace hover -->
+      <div id="external-description" class="text-end mt-3 pe-3 fw-semibold" style="color: #3B0273; display: none;"></div>
+    </div>
+  </section>
+  
+  
+  
+
+  <section id="info" class="info-section">
+    <div aria-colcount="container" class="info-container d-flex flex-wrap">
+      <div class="info-text">
+        <h2 class="display-5 fw-bold" class="display">¡Somo una plataforma dedicada a ayudarte!</h2>
+        <p>Create una galería digital aquí mismo y date a conocer a miles de personas.
+          En nuestra plataforma gente del todo el país podra ver tus obras y contactar contigo atravez de tus redes sociales o por aquí mismo, para comprar tus obras.
+          Nos esforzamos por brindarte un espacio seguro, accesible y lleno de oportunidades para impulsar tu carrera artística.
+        </p>
+      </div>
+      <div class="info-image">
+        <img src="imagenes/quienes somos.jpg" alt="Galería de arte" />
+      </div>
+    </div>
+  </section>
+
+  <section id="info2" class="info-section alt-layout position-relative">
+    <div class="info-container d-flex flex-wrap reverse-layout position-relative">
+      <div class="info-image">
+        <img src="imagenes/conose a artistas.jpg" alt="Artistas" />
+      </div>
+      <div class="info-text">
+        <h2 class="display-5 fw-bold">Descubre a diferentes artistas</h2>
+        <p>Conoce nuevos talentos y veteranos, explora perfiles y sé parte del movimiento cultural.
+          Descubre una amplia variedad de estilos, técnicas y visiones del mundo a través del arte de creadores de todas las regiones.
+Cada perfil artístico cuenta una historia distinta, permitiéndote conectar más allá de lo visual.
+Puedes seguir a tus artistas favoritos, comentar sus obras y compartirlas con tu comunidad.
+Sé parte de una red que impulsa el arte local y fortalece los lazos entre creadores y fanaticos del arte.
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+  <section id="info3" class="info-section">
+    <div aria-colcount="container" class="info-container d-flex flex-wrap">
+      <div class="info-text">
+        <h2 class="display-5 fw-bold" class="display">Vende tu arte por todo el Perú</h2>
+        <p>Te ayudamos a abrir tu tienda online y promocionarla para llegar a más personas.
+          Nosotros somos un medio por el cual la gente podra ver tus productos y ver a tiempo real el número de stock de los mismo.
+        </p>
+      </div>
+      <div class="info-image">
+        <img src="imagenes/abre tu tienda.jpg" alt="Galería de arte" />
+      </div>
+    </div>
+  </section>
+
+  <footer id="contacto" class="text-white text-center py-4">
+    <div class="container">
+      <div class="footer-row d-flex flex-wrap">
+        <div class="footer-links col-md-4">
+          <h4>Compañía</h4>
+          <ul>
+            <li><a href="#">Nosotros</a></li>
+            <li><a href="#">Servicios</a></li>
+            <li><a href="#">Privacidad</a></li>
+            <li><a href="#">Afiliados</a></li>
+          </ul>
+        </div>
+        <div class="footer-links col-md-4">
+          <h4>Ayuda</h4>
+          <ul>
+            <li><a href="#">Preguntas</a></li>
+            <li><a href="#">Compras</a></li>
+            <li><a href="#">Envíos</a></li>
+            <li><a href="#">Estado</a></li>
+            <li><a href="#">Pagos</a></li>
+          </ul>
+        </div>
+        <div class="footer-links col-md-4">
+          <h4>Síguenos</h4>
+          <div class="social-link">
+            <a href="#"><i class="fab fa-facebook-f"></i></a>
+            <a href="#"><i class="fab fa-instagram"></i></a>
+            <a href="#"><i class="fab fa-twitter"></i></a>
+            <a href="#"><i class="fab fa-linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+      <p>&copy; 2025 Art Gallery SHOP. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      const hoverFeatures = document.querySelectorAll('.hover-feature');
+      hoverFeatures.forEach(feature => {
+        feature.addEventListener('mouseover', () => {
+          const imgSrc = feature.getAttribute('data-img');
+          feature.style.backgroundImage = `url('${imgSrc}')`;
+          feature.style.backgroundSize = 'cover';
+          feature.style.backgroundPosition = 'center';
+          feature.style.color = 'white';
+        });
+        feature.addEventListener('mouseout', () => {
+          feature.style.backgroundImage = '';
+        });
+      });
+    });
+    document.addEventListener("DOMContentLoaded", () => {
+    const box1 = document.querySelector('.box-1');
+    const box2 = document.querySelector('.box-2');
+
+    box1.addEventListener('mouseenter', () => {
+      box1.classList.add('active');
+      box2.classList.add('shrink');
+    });
+
+    box1.addEventListener('mouseleave', () => {
+      box1.classList.remove('active');
+      box2.classList.remove('shrink');
+    });
+
+    box2.addEventListener('mouseenter', () => {
+      box2.classList.add('active');
+      box1.classList.add('shrink');
+    });
+
+    box2.addEventListener('mouseleave', () => {
+      box2.classList.remove('active');
+      box1.classList.remove('shrink');
+    });
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const box1 = document.querySelector('.box-1');
+    const box2 = document.querySelector('.box-2');
+
+    box1.addEventListener('mouseenter', () => {
+      box1.classList.add('active');
+      box2.classList.add('shrink');
+    });
+
+    box1.addEventListener('mouseleave', () => {
+      box1.classList.remove('active');
+      box2.classList.remove('shrink');
+    });
+
+    box2.addEventListener('mouseenter', () => {
+      box2.classList.add('active');
+      box1.classList.add('shrink');
+    });
+
+    box2.addEventListener('mouseleave', () => {
+      box2.classList.remove('active');
+      box1.classList.remove('shrink');
+    });
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll('.img-box');
+
+    boxes.forEach((box) => {
+      box.addEventListener('mouseenter', () => {
+        boxes.forEach(b => {
+          b.classList.remove('active');
+          b.classList.add('shrink');
+        });
+        box.classList.add('active');
+        box.classList.remove('shrink');
+      });
+
+      box.addEventListener('mouseleave', () => {
+        boxes.forEach(b => {
+          b.classList.remove('active');
+          b.classList.remove('shrink');
+        });
+      });
+    });
+  });
+  document.addEventListener("DOMContentLoaded", () => {
+    const boxes = document.querySelectorAll('.img-box');
+    const externalDesc = document.getElementById('external-description');
+
+    boxes.forEach((box) => {
+      box.addEventListener('mouseenter', () => {
+        const label = box.getAttribute('data-label');
+        const desc = box.getAttribute('data-desc');
+
+        boxes.forEach(b => {
+          b.classList.remove('active');
+          b.classList.add('shrink');
+        });
+
+        box.classList.add('active');
+        box.classList.remove('shrink');
+
+        externalDesc.innerText = desc;
+        externalDesc.style.display = 'block';
+      });
+
+      box.addEventListener('mouseleave', () => {
+        boxes.forEach(b => {
+          b.classList.remove('active');
+          b.classList.remove('shrink');
+        });
+
+        externalDesc.innerText = '';
+        externalDesc.style.display = 'none';
+      });
+    });
+  });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
